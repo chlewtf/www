@@ -1,0 +1,80 @@
+<script>
+  import './app.css';
+</script>
+
+<svelte:window />
+
+<div class="wrapper">
+  <div class="container">
+    <h1 class="title">chle</h1>
+    <p class="subtitle">a cool guy</p>
+
+    <div class="links">
+      <a href="https://github.com/chlewtf" target="_blank">GitHub</a>
+      <a href="https://twitter.com/chlewtf" target="_blank">Twitter</a>
+      <a href="mailto:hello@chle.wtf">Email</a>
+    </div>
+  </div>
+</div>
+
+<style>
+  :global(*) {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+  :global(html),
+  :global(body),
+  :global(.wrapper) {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  :global(body) {
+    background: #129E76;
+    color: #DCDCDC;
+    font-family: "Biryani", sans-serif;
+  }
+
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .container {
+    text-align: center;
+  }
+
+  .title {
+    font-size: 84px;
+    font-weight: 600;
+    line-height: 1;
+  }
+
+  .subtitle {
+    margin-top: 10px;
+    font-size: 20px;
+    opacity: 0.85;
+  }
+
+  .links {
+    margin-top: 16px;
+  }
+
+  .links :global(a) {
+    margin: 0 10px;
+    font-size: 16px;
+    color: #DCDCDC;
+    text-decoration: none;
+    font-weight: 700;
+  }
+
+  .links :global(a:hover) {
+    text-decoration: underline;
+  }
+</style>
